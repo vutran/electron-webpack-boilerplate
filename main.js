@@ -27,12 +27,8 @@ app.on('ready', function() {
     width: 800,
     height: 600
   })
-  if (process.env.NODE_ENV === "development") {
-    // open the devtools
-    mainWindow.webContents.openDevTools()
-  }
   // load the file
-  mainWindow.loadURL('file://' + __dirname + '/index.html')
+  mainWindow.loadURL('file://' + __dirname + '/app/index.html')
   // Register window events
   mainWindow.on('closed', function() {
     mainWindow = null

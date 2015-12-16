@@ -1,15 +1,19 @@
 // Import modules
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
-// Import components
-import App from './components/App'
+// Import components/containers
+import Root from './containers/Root'
 
-// Retrieve the root element/node
-let mountNode = document.getElementById('app')
+// Import stores/reducers
+import configureStore from './store/configure'
+import rootReducer from './reducers'
 
-// Render the app
+// Import store
+const store = configureStore()
+
 ReactDOM.render(
-	<App />,
-	mountNode
+  <Root store={store} />,
+  document.getElementById('app')
 )
