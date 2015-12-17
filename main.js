@@ -28,7 +28,7 @@ app.on('ready', function() {
     height: 600
   })
   // load the file
-  mainWindow.loadURL('file://' + __dirname + '/app/index.html')
+  mainWindow.loadURL('file://' + __dirname + '/index.html')
   // Register window events
   mainWindow.on('closed', function() {
     mainWindow = null
